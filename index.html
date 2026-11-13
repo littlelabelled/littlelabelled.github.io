@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Little Labelled | Personalised vial caps, pen bands & fridge organisers</title>
+<meta name="description" content="Little Labelled makes personalised 3D printed vial name caps, pen bands and fridge organiser trays. Made to order in Queensland, posted Australia-wide.">
+<meta property="og:title" content="Little Labelled">
+<meta property="og:description" content="Personalised 3D printed vial caps, pen bands and fridge organisers. Made in Queensland.">
+<meta property="og:image" content="images/logo.png">
+<link rel="icon" href="images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Nunito+Sans:wght@400;600;700;800;900&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+:root{
+  --font-head:"Outfit",system-ui,sans-serif; --font-body:"Nunito Sans",system-ui,sans-serif;
+  --bg:#070b1a; --surface:#0f1730; --band:#0b1124; --ink:#e8f3ff; --head:#ffffff; --muted:#a3b1cc;
+  --accent:#4fe0f5; --accent-ink:#5fe6f8; --on-accent:#05101f; --link:#c08bff;
+  --line:#1d2a4d; --line-strong:#2b3c69; --radius:18px;
+  --header-bg:rgba(7,11,26,.85); --footer-bg:#050816; --footer-ink:#e8f3ff;
+  --pic-bg:radial-gradient(circle at 50% 40%,#16245a,#0b1230); --pic-bg2:radial-gradient(circle at 50% 40%,#2a1458,#0d1030); --pic-bg3:radial-gradient(circle at 50% 40%,#0f3550,#0a1230);
+  --tag-bg:rgba(166,77,255,.18); --tag-ink:#d6b3ff;
+  --card-shadow:0 0 0 1px rgba(79,224,245,.05); --card-shadow-hover:0 0 0 1px rgba(79,224,245,.5),0 0 28px rgba(79,224,245,.25);
+  --logo-shadow:0 0 60px rgba(79,224,245,.35);
+  --i1:#9b4dff; --i2:#4fe0f5; --i3:#e9f6ff; --i4:#0b1433;
+}
+.hero{background:radial-gradient(900px 500px at 80% 30%,rgba(166,77,255,.18),transparent 60%),radial-gradient(700px 400px at 10% 90%,rgba(79,224,245,.10),transparent 60%)}
+.hero h1 em{font-style:normal;font-family:"Great Vibes",cursive;font-weight:400;font-size:1.25em;color:var(--accent);text-shadow:0 0 18px rgba(79,224,245,.6)}
+.btn{box-shadow:0 0 22px rgba(79,224,245,.35)}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.pic svg{filter:drop-shadow(0 0 10px rgba(79,224,245,.35))}
+#toast{background:var(--accent);color:var(--on-accent)}
+.note{border:1px solid var(--line-strong);border-radius:14px;padding:16px 18px;color:var(--muted);font-size:.9rem;background:var(--surface)}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="images/favicon.png" alt=""><span>Little Labelled</span></a>
+    <nav class="links" aria-label="Main">
+      <a href="#shop">Shop</a><a href="#how">How it works</a><a href="#about">About</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
+    </nav>
+    <button id="list-btn" type="button">My list <span id="list-count">0</span></button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">Personalised · 3D printed</span>
+        <h1>Every vial and pen, <em>beautifully</em> labelled</h1>
+        <p class="lead">Name caps for your vials, bands for your pens and a fridge tray with a spot for everything. Made to order in your words and colours, so you can grab the right one in a second.</p>
+        <div class="btns"><a class="btn" href="#shop">Shop the range</a><a class="btn ghost" href="#how">How ordering works</a></div>
+        <ul class="points"><li>Made to order</li><li>You approve a proof first</li><li>Posted Australia-wide</li></ul>
+      </div>
+      <img class="logo-big" src="images/logo.png" alt="Little Labelled logo: a purple vial cap with LL on it and a glowing name tag">
+    </div>
+  </section>
+
+  <section id="shop">
+    <div class="wrap">
+      <div class="shop-head">
+        <div><span class="eyebrow">The Vial &amp; Pen range</span><h2>Shop the range</h2></div>
+        <input id="search" type="search" placeholder="Search e.g. cap, pen, tray" aria-label="Search products">
+      </div>
+      <div id="cats" role="group" aria-label="Categories"></div>
+      <p id="cat-blurb"></p>
+      <div id="grid"></div>
+      <p class="note" style="margin-top:28px">Bulk pricing: <b>10% off 6 or more</b> caps or bands, and <b>15% off 12 or more</b>. Minimum order $15.</p>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <span class="eyebrow">How it works</span>
+      <h2>Ordering is easy</h2>
+      <p class="muted">No checkout to fight with. Build a list, send it to us, and we'll take it from there.</p>
+      <div class="steps">
+        <div class="step"><h3>Build your list</h3><p>Tap <b>+ Add to my list</b> and type the names, colours, vial sizes or pen model for each item.</p></div>
+        <div class="step"><h3>Send it to us</h3><p>Email it straight from the website, or copy it into an Instagram or Facebook message.</p></div>
+        <div class="step"><h3>Approve your proof</h3><p>We send you a picture of your design and the final price, including postage. Nothing is printed until you're happy.</p></div>
+        <div class="step"><h3>We print &amp; post</h3><p>Pay with the secure payment link, and we print your order and post it to you.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" style="background:var(--band)">
+    <div class="wrap two">
+      <div>
+        <span class="eyebrow">About us</span>
+        <h2>Small things, sorted</h2>
+        <p>Little Labelled started with a crowded fridge door and a handful of vials that all looked the same. We designed our own name caps, pen bands and trays on our 3D printer, and now we make them for everyone who's ever squinted at a tiny label.</p>
+        <p>Everything is designed by us and printed to order in Queensland, in the names and colours you choose.</p>
+      </div>
+      <div class="about-card" style="background:var(--surface);border:1px solid var(--line)">
+        <h3>Choose your colours</h3>
+        <p class="muted">Every item can be made in your choice of base colour and writing colour. Colour-code each name so you can tell them apart even without reading the label.</p>
+        <h3>Made to fit</h3>
+        <p class="muted" style="margin-bottom:0">Tell us your vial size (2, 3, 5 or 10 ml) and your pen brand and model. If you're not sure, send us a photo next to a ruler and we'll work it out.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap two">
+      <div>
+        <span class="eyebrow">Questions</span>
+        <h2>Good to know</h2>
+        <p class="muted">Can't see your question? <a data-email href="#">Email us</a> and we'll get back to you.</p>
+      </div>
+      <div>
+        <details><summary>Will the caps fit my vials?</summary><p>Our caps are made for standard small glass vials. Tell us your vial size when you order, and if your vials are a different shape, send a photo with a ruler and we'll check before printing.</p></details>
+        <details><summary>Which pens do the bands fit?</summary><p>Our bands are sized for common reusable pens. Tell us the brand and model (or measure across the pen), and we'll make the band to suit.</p></details>
+        <details><summary>How much is postage?</summary><p>Postage depends on the size of your order. We'll tell you the exact cost with your proof, before you pay.</p></details>
+        <details><summary>How long will my order take?</summary><p>Everything is made to order. We'll give you a time frame with your proof, and let you know when your order has been posted.</p></details>
+        <details><summary>Are the prices on the website final?</summary><p>They're a guide. Some items start from the price shown, and your proof will show the final price. Prices are in Australian dollars. We're not registered for GST, so no GST is included.</p></details>
+        <details><summary>What do you sell?</summary><p>We make labels and organisers only. We don't sell, supply or give advice about anything that goes in your vials or pens.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <span class="eyebrow" style="color:#c08bff">Say hello</span>
+      <h2>Ready to get labelled?</h2>
+      <a class="big-mail" data-email href="#"></a>
+      <div class="socials" data-socials></div>
+      <p class="fine">© <span data-year></span> Little Labelled · Made in Queensland, Australia · Prices in AUD<br>Labelling and organising products only.</p>
+    </div>
+  </section>
+</main>
+
+<div id="drawer" aria-hidden="true">
+  <div class="shade" data-close></div>
+  <aside class="panel" aria-label="My list">
+    <div class="panel-head"><h2>My list</h2><button class="x" data-close aria-label="Close">×</button></div>
+    <div id="list-items"></div>
+    <div class="panel-foot">
+      <div id="list-total"></div>
+      <input id="list-name" placeholder="Your first name (optional)">
+      <textarea id="list-extra" rows="2" placeholder="Anything else? e.g. vial sizes, pen model, colours"></textarea>
+      <div class="row"><button id="send" type="button">Email my list</button><button id="copy" type="button">Copy my list</button></div>
+      <small>Sending your list doesn't charge you anything. We'll reply with a proof and the final price.</small>
+    </div>
+  </aside>
+</div>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script src="products.js"></script>
+<script src="shop.js"></script>
+</body>
+</html>
